@@ -3,8 +3,8 @@ all: test build
 
 .PHONY: build
 build:
-	python setup.py sdist build install
+	python3 setup.py sdist build install --user --prefix=
 
 .PHONY: test
 test:
-	python setup.py test
+	python3 setup.py test

@@ -18,7 +18,8 @@ setup(
   license=license,
   keywords='luhn checkdigit checksum',
   url='https://github.com/jancajthaml-python/luhn',
-  packages=find_packages(exclude=('tests')),
+  packages=['luhn'],
+  zip_safe=True,
   extras_require={
     'test': ['coverage'],
   },
