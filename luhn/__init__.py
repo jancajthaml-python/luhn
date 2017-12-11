@@ -12,11 +12,14 @@ def digit(msg):
     x = (10 - x % 10)
     return 0 if x == 10 else x
   except ValueError:
-    return -1
+    return None
 
 def validate(msg):
   return digit(msg) == 0
 
 def generate(msg):
-  return msg + str(digit(msg))
-
+  d = digit(msg)
+  if d:
+    return msg + str(d)
+  else:
+    return None

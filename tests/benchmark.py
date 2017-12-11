@@ -9,4 +9,5 @@ def measure(name, stmt, setup, count):
   per_op_nanos = round(total_nanos / count, 1)
   print("%-18s%14s%20s ns/op" % (name, count, per_op_nanos))
 
-measure("luhn.valid", "luhn.digit('4242424242424242')", "import luhn", BENCHMARK_ITERATIONS)
+measure("luhn.digit (small)", "luhn.digit('123')", "import luhn", BENCHMARK_ITERATIONS)
+measure("luhn.digit (large)", "luhn.digit('00123014764700968325')", "import luhn", BENCHMARK_ITERATIONS)
