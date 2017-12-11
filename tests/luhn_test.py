@@ -14,8 +14,8 @@ class TestLuhn(unittest.TestCase):
 
     for t in tests:
       number, expected = t
-      valid = luhn.digit(number)
-      self.assertEqual(valid, expected, "luhn.digit?(%(number)s) == %(valid)s, expected %(expected)s" % locals())
+      valid = luhn.Digit(number)
+      self.assertEqual(valid, expected, "luhn.Digit?(%(number)s) == %(valid)s, expected %(expected)s" % locals())
 
   def test_validate(self):
     tests = [
@@ -26,8 +26,8 @@ class TestLuhn(unittest.TestCase):
 
     for t in tests:
       number, expected = t
-      valid = luhn.validate(number)
-      self.assertEqual(valid, expected, "luhn.validate?(%(number)s) == %(valid)s, expected %(expected)s" % locals())
+      valid = luhn.Validate(number)
+      self.assertEqual(valid, expected, "luhn.Validate?(%(number)s) == %(valid)s, expected %(expected)s" % locals())
 
   def test_generate(self):
     tests = [
@@ -36,8 +36,8 @@ class TestLuhn(unittest.TestCase):
 
     for t in tests:
       number, expected = t
-      valid = luhn.generate(number)
-      self.assertEqual(valid, expected, "luhn.generate?(%(number)s) == %(valid)s, expected %(expected)s" % locals())
+      valid = luhn.Generate(number)
+      self.assertEqual(valid, expected, "luhn.Generate?(%(number)s) == %(valid)s, expected %(expected)s" % locals())
 
 if __name__ == '__main__':
   unittest.main()

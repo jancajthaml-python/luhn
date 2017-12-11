@@ -1,7 +1,6 @@
 import os, sys
 sys.path.append(os.path.realpath(os.path.join(os.path.dirname(__file__), '..')))
 
-
 import timeit
 
 BENCHMARK_ITERATIONS = 1000000
@@ -13,5 +12,5 @@ def measure(name, stmt, setup, count):
   per_op_nanos = round(total_nanos / count, 1)
   print("%-18s%14s%20s ns/op" % (name, count, per_op_nanos))
 
-measure("luhn.digit (small)", "luhn.digit('123')", "import luhn", BENCHMARK_ITERATIONS)
-measure("luhn.digit (large)", "luhn.digit('00123014764700968325')", "import luhn", BENCHMARK_ITERATIONS)
+measure("luhn.Digit (small)", "luhn.Digit('123')", "import luhn", BENCHMARK_ITERATIONS)
+measure("luhn.Digit (large)", "luhn.Digit('00123014764700968325')", "import luhn", BENCHMARK_ITERATIONS)

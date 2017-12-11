@@ -2,7 +2,7 @@ __version__ = '0.1.0'
 
 m = [0, 2, 4, 6, 8, 1, 3, 5, 7, 9]
 
-def digit(msg):
+def Digit(msg):
   try:
     digits = list(msg)
     odd_digits = [*map(int, digits[1:][::2])]
@@ -16,11 +16,11 @@ def digit(msg):
   except IndexError:
     return None
 
-def validate(msg):
-  return digit(msg) == 0
+def Validate(msg):
+  return Digit(msg) == 0
 
-def generate(msg):
-  d = digit(msg)
+def Generate(msg):
+  d = Digit(msg)
   if d:
     return msg + str(d)
   else:
