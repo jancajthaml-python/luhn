@@ -11,7 +11,7 @@ import luhn
 
 ok = luhn.Validate("00123014764700968325")
 
-digit, error = luhn.Digit("x")
+digit = luhn.Digit("x")
 
 signed = luhn.Generate("1")
 ```
