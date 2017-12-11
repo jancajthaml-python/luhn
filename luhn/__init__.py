@@ -13,6 +13,8 @@ def digit(msg):
     return 0 if x == 10 else x
   except ValueError:
     return None
+  except IndexError:
+    return None
 
 def validate(msg):
   return digit(msg) == 0

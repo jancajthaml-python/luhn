@@ -10,7 +10,7 @@ with open('LICENSE') as f:
 
 setup(
   name='luhn',
-  description='A sample Python project',
+  description='Luhn checkdigit algorithm',
   long_description=readme,
   version='0.1.0',
   author='Jan Cajthaml',
@@ -20,6 +20,7 @@ setup(
   url='https://github.com/jancajthaml-python/luhn',
   packages=['luhn'],
   zip_safe=True,
+  test_suite='tests',
   extras_require={
     'test': ['coverage'],
   },
